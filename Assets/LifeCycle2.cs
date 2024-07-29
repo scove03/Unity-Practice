@@ -4,12 +4,26 @@ using UnityEngine;
 
 public class LifeCycle2 : MonoBehaviour
 {
+    void Start() 
+    {
+        //Vector3 vec = new Vector3(5, 0, 0);
+        //transform.Translate(vec);
+    }
+
     void Update()
     {
+        //GetAxis 증감값
+        //GetAxisRaw 증감값 x
+        Vector3 vec = new Vector3(
+            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical"),
+            0);
+        transform.Translate(vec);
+
         //Input: 게임 내 입력을 관리하는 클래스
         //anyKey: 아무 입력을 받을 때
-        if (Input.anyKeyDown)
-            Debug.Log("플레이어가 아무 키를 눌렀습니다.");
+        /*if (Input.anyKeyDown)
+            Debug.Log("플레이어가 아무 키를 눌렀습니다.");*/
 
         //입력을 누르고 있을 때
         /*if (Input.anyKey)
@@ -50,13 +64,12 @@ public class LifeCycle2 : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
             Debug.Log("슈퍼 점프!!");*/
 
-        if (Input.GetButton("Horizontal"))
+        /* if (Input.GetButton("Horizontal"))
             //GetAxis: 수평 수직 버튼 입력을 받으면 float(가속도o)
             //GetAxisRaw: (가속도 x)
             Debug.Log("횡 이동 중..." + Input.GetAxisRaw("Horizontal"));
         
         if (Input.GetButton("Vertical"))
-            Debug.Log("횡 이동 중..." + Input.GetAxisRaw("Vertical"));
-
+            Debug.Log("종 이동 중..." + Input.GetAxisRaw("Vertical")); */
     }
 }

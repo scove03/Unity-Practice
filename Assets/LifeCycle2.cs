@@ -15,8 +15,8 @@ public class LifeCycle2 : MonoBehaviour
         //GetAxis 증감값
         //GetAxisRaw 증감값 x
         Vector3 vec = new Vector3(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical"),
+            Input.GetAxisRaw("Horizontal") * Time.deltaTime, //프레임 값이 적든 많든 나오는 시간은 동일하도록 조정 (프레임이 적으면 값이 크다)
+            Input.GetAxisRaw("Vertical") * Time.deltaTime,
             0);
         transform.Translate(vec);
 

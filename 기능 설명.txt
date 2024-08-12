@@ -1,0 +1,41 @@
+*File: 저장, 게임 빌드
+*Edit: 편집
+*Assets: 게임 개발에 필요한 모든 리소스(자원)
+*GameObject: Hierarchy에 있는 모든것
+*Component: Inspector에 있는 모든것
+
+
+*Scene: 세트장
+*Game: Scene의 카메라를 통한 모습
+*Project: 저장한 파일들 
+	Assets: 게임 개발에 필요한 모든 리소스(자원)
+		Prefab: 하나를 만들어 저장하면 계속 사용 가능
+		Script: 코드로 대상에세 명령하는 각본
+		Senses: 현재 작업중인 씬과 하이어라키를 저장
+*Console: 에러 및 경고 표시, 디버그 로그
+
+*Hierarchy: 물체 생성
+	Main Camera: 플레이어가 보는 화면
+		Ctrl + Shift + F : Scene 화면 각도로 카메라 이동 
+
+*Inspector: 물체 설정
+
+	Mesh: 물체 모양
+
+	Sphere Collider: 충돌 이벤트
+		->(Physics) Material: 물리적 재질(탄성, 마찰)
+			->Bounciness: 탄성력 0: off / 1: on
+			->Bounce Combine: 탄성력 수치
+
+	Rigidbody: 중력 이벤트
+		->Mass: 물체의 무게
+		->Use Gravity: 중력 on/off
+		->Is Kinematic: 외부 물리 효과 off/on (물체가 충돌에 대하여 움직이면 안될 때 on)
+
+	Material: 재질
+		->Albedo: 색상 (사각형 -> Texture :재질에 들어가는 이미지)
+		->Metalic: 금속 재질 수치
+		->Smoothness: 빛 반사 수치
+		->Emission: 텍스쳐 발광(밝기 조절)
+		->Tiling(x, y): 텍스쳐 반복 타일 개수
+		

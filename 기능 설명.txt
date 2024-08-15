@@ -6,6 +6,9 @@
 
 
 *Scene: 세트장
+	World(카메라 O)
+	screen(카메라 X)
+
 *Game: Scene의 카메라를 통한 모습
 *Project: 저장한 파일들 
 	Assets: 게임 개발에 필요한 모든 리소스(자원)
@@ -16,13 +19,18 @@
 
 *Hierarchy: 물체 생성
 	Main Camera: 플레이어가 보는 화면
-		Ctrl + Shift + F : Scene 화면 각도로 카메라 이동 
+		Ctrl + Shift + F : Scene 화면 각도로 카메라 이동
+
+	UI: 사용자 인터페이스(Uesr Interface)
+		Canvas: UI가 그려지는 도화지 역활인 컴포넌트
+		Text: 물자열을 표시하는 UI
 
 *Inspector: 물체 설정
 
 	Mesh: 물체 모양
-
-	Sphere Collider: 충돌 이벤트
+		
+	Collider: 충돌 이벤트
+		-> Is Trigger 물체가 겹쳤을때 이벤트 작동 on/off
 		->(Physics) Material: 물리적 재질(탄성, 마찰)
 			->Bounciness: 탄성력 0: off / 1: on
 			->Bounce Combine: 탄성력 수치

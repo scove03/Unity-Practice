@@ -1,0 +1,49 @@
+//**속도, 속력, 이동 이벤트
+
+	//#중력 적용
+	Rigidbody rigid;
+	rigid = GetComponent<Rigidbody>();
+
+	//*지정 방향으로 이동 (velocity)
+	rigid.velocity = Vector3.right;
+	rigid.velocity = new Vector3(2, 4, 3);
+
+	//*힘을 주는 방식 (AddForce(가속, 무게 반영))
+	rigid.AddForce(Vector3.up * @, ForceMode.Impulse);
+
+	//*버튼을 사용하여 이동
+	if (Input.GetButtonDown("Jump@"))
+	
+	//*키보드 이동
+	Vector3 vector = new Vector3(
+ 		Input.GetAxisRaw("Horizontal"), 
+    		0,
+		Input.GetAxisRaw("Vertical"));
+
+	rigid.AddForce(vector, ForceMode.Impulse);
+
+	//*회전력(AddTorque (벡터 방향을 축으로 시계방향 회전력 생김))
+	rigid.AddTorque(Vector3.up);
+============================================
+
+//**충돌 이벤트(Collider)
+
+	//#재질 적용
+	MeshRenderer mesh; 
+	Material material;
+	mesh = GetComponent<MeshRenderer>();
+	material = mesh.material;
+
+	//*물리적인 충돌로 발생하는 이벤트 함수
+	//Enter: 충돌 시작시, Stay: 충돌 중, Exit: 충돌 종료시
+	void OnCollisionEnter(Collision collision)
+		//*특정 물체지정
+		collision.gameObject.name == @@@
+		//*색상지정 (Color32: 255개 색상)
+		material.color = new Color(@, @, @);
+		
+
+	//*콜라이더(트리거) 충돌로 발생하는 이벤트 함수(물체 겹침 이벤트)
+	void OnTriggerEnter(Collider other)
+		//*특정 물체 지정
+		other.name == @@@
